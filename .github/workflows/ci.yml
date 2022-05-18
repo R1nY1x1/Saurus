@@ -18,6 +18,6 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/chechoout@v2
+      - uses: actions/checkout@v2
       - name: build
         run: go build ./main.go
