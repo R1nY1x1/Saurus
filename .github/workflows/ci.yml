@@ -1,0 +1,23 @@
+name: go-ci
+
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set up
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.13
+        id: go
+      - name: check out
+        uses: actions/checkout@v2
+
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/chechoout@v2
+      - name: build
+        run: go build ./main.go
