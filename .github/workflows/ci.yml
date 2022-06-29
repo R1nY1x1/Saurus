@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: go build ./main.go
+        run: go build ./saurus.go
