@@ -13,8 +13,7 @@ Can translate Input and Output.
 
 **PLEASE SET PATH** "WORDSAPI_KEY" and "GAS_KEY".
 
-How to get [WORDSAPI_KEY]()
-How to get [GAS_KEY]()
+How to get [WORDSAPI_KEY](/doc/WORDSAPI_HOW.md) and [GAS_KEY](/doc/GAS_KEY_HOW.md)
 
 ```
 >> ./saurus -h
