@@ -99,7 +99,12 @@ func main() {
 	for i := len(results) - 1; i >= 0; i-- {
 		result := (results[i].(map[string]interface{}))
 		if synonyms, ok := result["synonyms"]; ok {
-			fmt.Println(synonyms, result["definition"])
+      var synonymsStr []string
+      synonyms := synonyms.([]interface{})
+      for _, synonym := range synonyms {
+        synonymsStr = append(synonymsStr, synonym.(string))
+      }
+      fmt.Println("[", strings.Join(synonymsStr, ", "), "] =>", result["definition"])
 			if doTransOutput {
 				text = Translate(result["definition"].(string), "en", "ja")
 				fmt.Println("<", text, ">")
